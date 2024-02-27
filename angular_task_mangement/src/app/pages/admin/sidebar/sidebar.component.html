@@ -1,0 +1,25 @@
+<mat-card>
+
+    <mat-action-list>
+
+        <div mat-subheader>Menu</div>
+
+        <button mat-list-item routerLink="/admin/profile">
+            <mat-icon mat-list-icon>account_circle</mat-icon>
+            Profile
+        </button>
+        <button mat-list-item routerLink="/admin/tasks">
+            <mat-icon mat-list-icon>task</mat-icon>
+            Task
+        </button>
+        <button mat-list-item routerLink="/admin/add-task">
+            <mat-icon mat-list-icon>add_shopping_cart</mat-icon>
+            Add Task
+        </button>
+        <button mat-list-item (click)="logout()">
+            <mat-icon mat-list-icon><a >logout</a></mat-icon>
+            Logout
+        </button>
+    </mat-action-list>
+
+</mat-card>

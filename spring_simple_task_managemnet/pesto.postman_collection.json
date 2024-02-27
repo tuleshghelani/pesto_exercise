@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "9e02c9b5-4289-4b58-8dac-3d1b152c1de2",
+		"name": "pesto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18783939"
+	},
+	"item": [
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "createTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwODcxNDIyOSwiaWF0IjoxNzA4Njk2MjI5fQ.aTVt5ZTc1Fdx_-wmEPiEOeX4yRKHxIRXTvkYWkbV8YaRZTM53FpeW1PZcgkRbGq7ZzRpe7QIA7_FtS27fwFpkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"tulesh13\",\r\n    \"password\": \"tulesh\",\r\n    \"firstName\": \"tulesh\",\r\n    \"lastName\": \"ghelani\",\r\n    \"email\": \"tulesh@gmail.com\",\r\n    \"phone\": 12345678\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/task/createTask",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"createTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwODcxNDIyOSwiaWF0IjoxNzA4Njk2MjI5fQ.aTVt5ZTc1Fdx_-wmEPiEOeX4yRKHxIRXTvkYWkbV8YaRZTM53FpeW1PZcgkRbGq7ZzRpe7QIA7_FtS27fwFpkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"task title1\",\r\n    \"description\": \"description 1\",\r\n    \"status\": \"To Do\",\r\n    \"dueDate\": \"2024-03-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/task/createTask",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"createTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTask",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwODcxNDIyOSwiaWF0IjoxNzA4Njk2MjI5fQ.aTVt5ZTc1Fdx_-wmEPiEOeX4yRKHxIRXTvkYWkbV8YaRZTM53FpeW1PZcgkRbGq7ZzRpe7QIA7_FtS27fwFpkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"task title123\",\r\n    \"description\": \"description 1\",\r\n    \"status\": \"To Do\",\r\n    \"dueDate\": \"2024-03-01\",\r\n    \"id\": 31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/task/getAllTask",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"getAllTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserTask",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwODcxNDIyOSwiaWF0IjoxNzA4Njk2MjI5fQ.aTVt5ZTc1Fdx_-wmEPiEOeX4yRKHxIRXTvkYWkbV8YaRZTM53FpeW1PZcgkRbGq7ZzRpe7QIA7_FtS27fwFpkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"task title123\",\r\n    \"description\": \"description 1\",\r\n    \"status\": \"To Do\",\r\n    \"dueDate\": \"2024-03-01\",\r\n    \"id\": 31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/task/getUserTask",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"getUserTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTaskById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwODcxNDIyOSwiaWF0IjoxNzA4Njk2MjI5fQ.aTVt5ZTc1Fdx_-wmEPiEOeX4yRKHxIRXTvkYWkbV8YaRZTM53FpeW1PZcgkRbGq7ZzRpe7QIA7_FtS27fwFpkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"task title123\",\r\n    \"description\": \"description 1\",\r\n    \"status\": \"To Do\",\r\n    \"dueDate\": \"2024-03-01\",\r\n    \"id\": 31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/task/getUserTask",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"getUserTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcwODcxNDIyOSwiaWF0IjoxNzA4Njk2MjI5fQ.aTVt5ZTc1Fdx_-wmEPiEOeX4yRKHxIRXTvkYWkbV8YaRZTM53FpeW1PZcgkRbGq7ZzRpe7QIA7_FtS27fwFpkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"task title12345\",\r\n    \"description\": \"description 12345\",\r\n    \"status\": \"In Progress\",\r\n    \"dueDate\": \"2024-03-01\",\r\n    \"id\": 31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/task/deleteTask",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"task",
+								"deleteTask"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"tulesh\",\r\n    \"password\": \"tulesh\",\r\n    \"firstName\": \"tulesh\",\r\n    \"lastName\": \"ghelani\",\r\n    \"email\": \"tulesh@gmail.com\",\r\n    \"phone\": 12345678\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/user/createUser",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "localhost:8080"
+		}
+	]
+}

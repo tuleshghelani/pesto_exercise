@@ -1,0 +1,44 @@
+<mat-card>
+    <h1>Update Task</h1>
+    <!-- {{taskUpdateData | json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form (ngSubmit)="updateTaskONFormSubmit()">
+                        <mat-form-field class="col-md-12" appearance="outline">
+                            <mat-label>Title</mat-label>
+
+                            <input required [(ngModel)]="taskUpdateData.title" autofocus type="text" name="title" matInput placeholder="Enter here.........." />
+                        </mat-form-field>
+
+                        <mat-form-field class="col-md-12" appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <textarea required [(ngModel)]="taskUpdateData.description" type="text" name="description" rows="15" matInput placeholder="Enter Task Description here........."></textarea>
+                        </mat-form-field>
+
+                        <mat-form-field class="col-md-6" appearance="outline">
+                            <mat-label>Due date</mat-label>
+                            <input required [(ngModel)]="taskUpdateData.dueDate" type="date" name="dueDate" matInput/>
+                        </mat-form-field>
+                        
+                        <mat-form-field class="col-md-6" appearance="outline">
+                            <mat-label>Status</mat-label>
+                            <mat-select [(ngModel)]="taskUpdateData.status" name="status">
+                              <mat-option *ngFor="let status of taskStatus | keyvalue" [value]="status.value">
+                                {{ status.value }}
+                              </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <div class="container text-center">
+
+                            <button type="submit" mat-raised-button color="primary">Update</button>
+                            <button type="reset" class="ml20" mat-raised-button color="accent">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
